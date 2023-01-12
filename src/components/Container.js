@@ -14,8 +14,28 @@ function Container({
       <div className={`container-children ${direction} ${contentPosition}`}>
         {children}
       </div>
+      <div class="container">
+  <h1>Hello, I'm in a container!</h1>
+  <p>I'm a description!</p>
+</div>
     </div>
   );
 }
+function Header(props){
+  return (
+<div className="container" >
+  <h1>{props.header}</h1>
+  <p>{props.description}</p>
+   </div>
+
+  );
+}
+
+function Example(props) {
+  return <div>{props.exampleProp}</div>;
+}
+
+<Example exampleProp="example value" />;
+
 
 export default Container;
